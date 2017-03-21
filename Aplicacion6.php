@@ -8,7 +8,7 @@
     var_dump($array);
 
     $array2= array();
-    echo ""."<br>";
+    echo "<br>"."parte2"."<br>";
     for ($i=0; $i <5 ; $i++) { 
     $array2[$i] = rand(0,10);
     }
@@ -16,7 +16,11 @@
     echo $array2[$i]." ";
     }
     $array3= array();
-
+    for ($i=0; $i < 5; $i++) { 
+        array_push($array3,rand(0,10));
+    }
+    echo "<br>"."parte 3"."<br>";
+    var_dump($array3);
     
   
   
