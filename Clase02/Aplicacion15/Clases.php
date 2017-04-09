@@ -23,7 +23,7 @@ abstract class FiguraGeometrica
     }
     public function ToString()
     {
-      return "Color: ".$this->_color."    "."Perimetro: ".$this->_perimetro."   "."Superficie: ".$this->_superficie."</br>";
+      return "Color: ".$this->GetColor()."</br>"."Perimetro: ".$this->_perimetro."</br>"."Superficie: ".$this->_superficie."</br>";
     }
 }
 
@@ -47,13 +47,24 @@ class Rectangulo extends FiguraGeometrica
     }
     public function Dibujar()
     {
-        return $this->$_color;
+        $string="";
+        $aux1=$this->_ladoDos;
+        for ($j=$aux1; $j >0 ; $j--) 
+        {  
+            $aux2 =$this->_ladoUno;
+            for ($i=$aux2; $i > 0 ; $i--) 
+            { 
+               $string= "<font color='red'>*</font>".$string;
+            }
+            $string= "</br>".$string;
+        }   
+        return $string;
 
     }
-   public function ToString()
+    public function ToString()
     {
-       $res=  parent::ToString();
-         return $res."Lado 1: ".$this->_ladoUno."  "."Lado 2: ".$this->_ladoDos;
+        $res=  parent::ToString();
+        return $this->Dibujar()."</br>".$res."Lado 1: ".$this->_ladoUno."  "."Lado 2: ".$this->_ladoDos;
     }
 }
 
