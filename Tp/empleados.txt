@@ -1,1 +1,0 @@
-Apellido: vidarte - Nombre: maximiliano - Dni: 3342718 - Sexo: M - Legajo: 100197 - Sueldo: 199999</br>
