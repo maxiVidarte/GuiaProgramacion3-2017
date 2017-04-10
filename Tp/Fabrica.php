@@ -19,26 +19,35 @@
         }
         public function CalcularSueldos()
         {
-            //probar como meter los sueldos
-            foreach ($this->_empleados as $key => $value) {
-                echo $key;
+            $Sueldos= 0;
+            foreach ($this->_empleados as $key) {
+                $Sueldos +=  $key->getSueldo();
             }
+            return $Sueldos;
         }
         public function EliminarEmpleado($persona)
         {
-            unset($_empleados->persona);
+            $indice= array_search($persona,$this->_empleados);
+            if(false != $indice)
+            {
+                unset($this->_empleados[$indice]);
+                $arrayNuevo = array_values($this->_empleados);
+                $this->_empleados = $arrayNuevo;
+
+            }
         }
         private function EliminarEmpleadosRepetidos()
         {
-            var_dump(array_unique($this->_empleados));
+           $array = array_unique($this->_empleados, SORT_REGULAR);
+           $this->_empleados = $array;
         }
         public function ToString()
         {
-            $string = "Razon social: ".$this->_razonSocial;
-            foreach ($this->_empleados as $key => $value) {
-                $String = $string.$value->ToString();
+            $string= "Razon Social: ".$this->_razonSocial;
+            foreach ($this->_empleados as $key) {
+                $string = $string." - ".$key->ToString();
             }
-            return $string;
+           return $string;
         }
     }
     

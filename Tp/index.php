@@ -6,7 +6,10 @@
     $Fab1 = new Fabrica("La Serenisima");
     $Fab1->AgregarEmpleado($Emp1);
     $Fab1->AgregarEmpleado($Emp2);
+    $Fab1->AgregarEmpleado($Emp2);
+    $Fab1->AgregarEmpleado($Emp1);
+    echo $Fab1->CalcularSueldos()."</br>";
     
-    var_dump($Fab1);
+    echo $Fab1->ToString();
     
 ?>
