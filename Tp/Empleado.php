@@ -29,7 +29,7 @@
         public function ToString()
         {
             $ra = parent::ToString();
-            return $ra." - "."Legajo: ".$this->getLegajo()." - "."Sueldo: ".$this->getSueldo()."</br>";
+            return $ra."-"."Legajo:".$this->getLegajo()."-"."Sueldo:".$this->getSueldo()." ";
         }
 
     }
