@@ -17,7 +17,6 @@ $path = "empleados.txt";
             $miArchivo = fopen($path,"w");
             fwrite($miArchivo,$empleado->ToString()."\r\n");
         }
-        echo "</br>".'<a href="index.html">Volver</a>';
     }
     else
     {

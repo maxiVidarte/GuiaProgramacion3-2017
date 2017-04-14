@@ -8,7 +8,7 @@
     $Fab1->AgregarEmpleado($Emp2);
     $Fab1->AgregarEmpleado($Emp2);
     $Fab1->AgregarEmpleado($Emp1);
-    echo $Fab1->CalcularSueldos()."</br>";
+    //echo $Fab1->CalcularSueldos()."</br>";
     
     echo $Fab1->ToString();
     

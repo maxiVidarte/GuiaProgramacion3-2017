@@ -1,17 +1,14 @@
 <?php 
+include("Empleado.php");
 $gestor = fopen("empleados.txt","r");
-$string;
-$i=0;
 if($gestor)
-while (($bufer = fgets($gestor,9999)) != false)
 {
-    $string=$string.$bufer;
+    while (($bufer = fgets($gestor,9999)) != false)
+    {
+       $array = explode("-",$bufer);
+       $Emp = new Empleado($array[0], $array[1], $array[2], $array[3], $array[4], $array[5]);
+       echo $Emp->ToString()."</br>";
+    }
 }
-if(!feof($gestor))
-{   
-    echo "Error";
-}
-$myArray= explode(" ",$string);
-var_dump($myArray);
 fclose($gestor);
 ?>

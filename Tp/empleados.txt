@@ -1,3 +1,2 @@
-Apellido:vidarte-Nombre:maximiliano-Dni:3342718-Sexo:M-Legajo:100197-Sueldo:290000 
-Apellido:rifici-Nombre:cintia-Dni:36154488-Sexo:F-Legajo:45545646-Sueldo:1213545646 
-Apellido:rifici-Nombre:cintia-Dni:36154488-Sexo:F-Legajo:45545646-Sueldo:1213545646 
+vidarte-maximiliano-3342718-M-100197-1213545646
+rifici-cintia-36154488-F-45545646-290000
