@@ -7,7 +7,7 @@
     <title>Trabajo Practico</title>
 </head>
 <body>
-        <form action="administracion.php" method="POST">
+        <form action="administracion.php" enctype="multipart/form-data" method="POST">
            Nombre:      <input type="text" name="nombre" value=""></br>
            Apellido:    <input type="text" name="apellido" value=""></br>
            Dni:         <input type="text" name="dni" value=""></br>
@@ -15,6 +15,7 @@
                         Femenino<input type="radio" name="sexo" value="F"></br>
            Legajo:      <input type="text" name="legajo" value=""></br>
            Sueldo:      <input type="text" name="sueldo" value=""></br>
+           Foto:        <input type="file" name="archivo" ></br>    
            <input type="submit" name= "guardar" value= "guardar">
            <input type="submit" name="leer" value="Leer">
         </form>
