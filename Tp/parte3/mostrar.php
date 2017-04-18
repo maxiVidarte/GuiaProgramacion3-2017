@@ -19,5 +19,6 @@ while ($file = readdir($filehandle)) {
 } 
 closedir($filehandle); // Fin lectura archivos
 }*/
+}
 fclose($gestor);
 ?>
