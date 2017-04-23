@@ -1,5 +1,6 @@
 <?php
 include "Empleado.php";
+
 $arrayExt = array("jpg","bmp","gif","png","jpeg");
     if(isset($_POST["guardar"]))
     {
@@ -9,16 +10,13 @@ $arrayExt = array("jpg","bmp","gif","png","jpeg");
             {
             if("image/".$key ==$_FILES['archivo']['type'])
                 {
-                    
-                    $destino = "uploads/".$_FILES["archivo"]["name"];
+                    $destino = "uploads/".$_POST["dni"]."-".$_POST["apellido"].".".trim($_FILES["archivo"]["type"],"image/");
                     move_uploaded_file($_FILES["archivo"]["tmp_name"],$destino);
+                    
                 }
             }
-    
-        
-
     $empleado= new Empleado($_POST["nombre"],$_POST["apellido"],$_POST["dni"],$_POST["sexo"],$_POST["legajo"],$_POST["sueldo"]);
-    //$empleado->setPathFoto($_POST["archivo"]);
+    $empleado->setPathFoto($destino);
     $path = "empleados.txt";
             if(isset($_POST["nombre"],$_POST["apellido"],$_POST["dni"],$_POST["sexo"],$_POST["legajo"],$_POST["sueldo"]))
             {
@@ -44,14 +42,6 @@ $arrayExt = array("jpg","bmp","gif","png","jpeg");
             echo "la imagen es muy grande "."</br>"."<a href='index.html'>Error</a>";
         }
     }
-//validar que el archivo es una imagen
-echo "</br>"."</br>"."</br>".$_FILES['archivo']['name']."</br>";
-//validar solo las extensiones jpg, bmp, gif, png o jpeg2
-echo $_FILES['archivo']['type']."</br>";
-//validar que el tamaño sea menor a 1MB(1024.000)
-echo $_FILES['archivo']['size']."</br>";
-//validar que no exista un archivo con el mismo nombre en el repositorio final (./fotog)
-
 ?>
 
 
