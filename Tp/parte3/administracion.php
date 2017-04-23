@@ -1,5 +1,5 @@
 <?php
-include "Empleado.php";
+include "clases/Empleado.php";
 
 $arrayExt = array("jpg","bmp","gif","png","jpeg");
     if(isset($_POST["guardar"]))
@@ -10,7 +10,7 @@ $arrayExt = array("jpg","bmp","gif","png","jpeg");
             {
             if("image/".$key ==$_FILES['archivo']['type'])
                 {
-                    $destino = "uploads/".$_POST["dni"]."-".$_POST["apellido"].".".trim($_FILES["archivo"]["type"],"image/");
+                    $destino = "fotos/".$_POST["dni"]."-".$_POST["apellido"].".".trim($_FILES["archivo"]["type"],"image/");
                     move_uploaded_file($_FILES["archivo"]["tmp_name"],$destino);
                     
                 }

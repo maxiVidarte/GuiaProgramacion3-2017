@@ -1,5 +1,5 @@
 <?php 
-include("Empleado.php");
+include("clases/Empleado.php");
 $gestor = fopen("empleados.txt","r");
 if($gestor)
 {
@@ -14,7 +14,7 @@ if($gestor)
         echo "Sexo:".$array[3]."</br>";
         echo "Legajo:".$array[4]."</br>";
         echo "Sueldo:".$array[5]."</br>";
-       echo "<p><img src=".$Emp->getPathFoto()." align=middle></p>";
+       echo "<p><img src=".$Emp->getPathFoto()."style='width:304px;height:228px;' ></p>";
     }
 }
     
