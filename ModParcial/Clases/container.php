@@ -67,5 +67,18 @@ class conteiner
 		 }
 		 return $arrayRetorno;
 	}
-    
+	public static function TraerTodosLosConteinerBD2($pais)
+	{
+		$arrayRetorno = array();
+		$objetoAcceso = AccesoDatos::DameUnObjetoAcceso();
+		$consulta = $objetoAcceso->RetornarConsulta('SELECT * FROM `conteiner` WHERE pais = '."'".$pais."'");
+		$consulta->Execute();
+		 while ($fila = $consulta->fetchObject("conteiner")) 
+		 {
+			 array_push($arrayRetorno,$fila);
+		 }
+		 return $arrayRetorno;
+
+	}
+
 }

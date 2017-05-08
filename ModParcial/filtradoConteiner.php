@@ -21,8 +21,16 @@
 			<h1>Listado de Conteiners</h1>
 
 <?php 
-	$ArrayDeProductos = conteiner::TraerTodosLosConteinerBD(); 
-
+	if($_POST["buscador"]!="Todos")
+	{
+		$ArrayDeProductos = conteiner::TraerTodosLosConteinerBD2($_POST["buscador"]);
+		
+	}
+	else
+	{
+		$ArrayDeProductos = conteiner::TraerTodosLosConteinerBD(); 
+	}
+	
 	echo "<table class='table'>
 			<thead>
 				<tr>
@@ -51,9 +59,9 @@
 	}	
 echo "</table>";		
 ?>
-<form method="POST" name="buscar" action="" class="MiBotonUTN">
+<form method="POST" name="buscar" action="filtradoConteiner.php" class="CajaUno">
 <input type="search" name="buscador" style="color:black" placeholder="ingrese el pais" value="Todos">
-	<input class="btn" style="background-color:black" type="submit" name="buscar" value="buscar">
+	<input class = "btn" style="background-color:black" type="submit" name="buscar" value="buscar">
 </form>
 		</div>
 	</div>
