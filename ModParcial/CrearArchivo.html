@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>Login</title>
+	  
+		<meta charset="UTF-8">
+
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body style="background-color:cadetblue;">
+	<div class="container">
+	 <a class="btn btn-info" href="index.html">Menu principal</a>
+		<div class="page-header">
+			<h1 style="color:antiquewhite;text-align:center;">Usuario</h1>      
+		</div>
+		<div class="CajaInicio animated bounceInRight">
+			<h1>Complete los campos para crear alta</h1>
+
+			    <form id="FormIngreso" method="post"  action="UsuarioCarga.php" > 
+				<input type="text" name="nombre" placeholder="Ingrese nombre"required  />
+                <input type="text" name="correo" placeholder="Ingrese mail" required  />
+                <br>
+                <input type="text" name="edad" placeholder="Ingrese edad" required  />
+				<input type="text" name="clave" placeholder="Ingrese clave" required/>
+
+				<input type="submit" class="MiBotonUTN" name="guardar" value="Guardar"/>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

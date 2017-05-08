@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>ALTA de Container</title>
+	  
+		<meta charset="UTF-8">
+
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body style="background-color:cadetblue;">
+    <a class="btn btn-info" href="index.html">Menu Principal</a>
+
+	<div class="container">
+	
+		<div class="page-header">
+			<h1 style="color:antiquewhite;text-align:center;">CONTAINER</h1>      
+		</div>
+		<div class="CajaInicio animated bounceInRight">
+			<h1>Complete los campos para crear alta</h1>
+
+			<form id="FormIngreso" method="post" enctype="multipart/form-data" action="ConteinerAlta.php" require >
+				<input type="text" name="numero1" placeholder="Ingrese numero" require />
+				<input type="text" name="descripcion1" placeholder="Ingrese descripcion" require />
+				<input type="text" name="pais1" placeholder="Ingrese pais" require />
+				<input type="file" name="archivo" /> 
+
+				<input type="submit" class="MiBotonUTN" name="guardarBD" />
+			</form>
+		
+		</div>
+	</div>
+</body>
+</html>

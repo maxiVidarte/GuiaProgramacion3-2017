@@ -1,0 +1,12 @@
+<button type="button" id="botonSalir" onclick="Mostrar('login')">Salir</button>
+<form class="card cardAdmin">
+    <h1>Alta de persona</h1><br>
+    <input type="file" id="foto"/><br><br>
+    <input type="text" id="email" placeholder="Email"/>
+    <input type="text" id="password" placeholder="Contraseña"/><br>
+    <input type="radio" name="tipo" id="usuario" value="0"> Usuario
+  	<input type="radio" name="tipo" id="admin" value="1"> Admin<br><br>
+    <input type="button" value="Ingresar" onclick="DarAlta();"/><br>
+    <input type="button" value="Cancelar" onclick="Mostrar('principalAdmin');"/>
+    <p id="mensajeError"></p>
+</form>
