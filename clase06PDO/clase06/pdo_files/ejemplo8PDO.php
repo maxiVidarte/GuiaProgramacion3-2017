@@ -45,7 +45,7 @@ include_once ("clases/cd.php");
 
 $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
 
-$consulta = $objetoAccesoDato->RetornarConsulta("select titel AS titulo, interpret AS interprete, jahr AS anio "
+$consulta = $objetoAccesoDato->RetornarConsulta("select title AS titulo, interpret AS interprete, jahr AS anio "
                                                 . "FROM cds");
 $consulta->execute();
 
