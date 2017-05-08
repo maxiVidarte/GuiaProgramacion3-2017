@@ -23,14 +23,14 @@
 <?php 
 	if($_POST["buscador"]!="Todos")
 	{
-		$ArrayDeProductos = conteiner::TraerTodosLosConteinerBD2($_POST["buscador"]);
-		
+		$ArrayDeProductos = conteiner::TraerTodosLosConteinerBD2($_POST["buscador"]); 
 	}
 	else
 	{
 		$ArrayDeProductos = conteiner::TraerTodosLosConteinerBD(); 
 	}
 	
+
 	echo "<table class='table'>
 			<thead>
 				<tr>
