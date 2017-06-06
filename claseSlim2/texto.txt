@@ -1,0 +1,18 @@
+clase slim segunda parte 
+cargar en un formulario 
+/*----------------instalar postman---------------*/
+1)cors tiene que tener habilitado para poder ingresar desde cualquier servidor
+poniendo lo siguiente en el index
+$app->add(function ($req, $res, $next) {
+    $response = $next($req, $res);
+    return $response
+            ->withHeader('Access-Control-Allow-Origin', '*')
+            ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
+            ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+});
+
+2)evitar el index.php ////-------se evita configurando el archivo .htaccess(ejemplo en la carpeta composer)------/////
+3)file /archivos (subirlo a slim) guardar todas las imagenes que se vayan cargando
+a)crear un html con un formulario con los datos del cd 
+
+

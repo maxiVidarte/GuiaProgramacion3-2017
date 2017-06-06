@@ -6,10 +6,23 @@ require '/vendor/autoload.php';
 require 'cd.php';
 require 'AccesoDatos.php';
 $app = new \Slim\App;
+$app->add(function ($req, $res, $next) {
+    $response = $next($req, $res);
+    return $response
+            ->withHeader('Access-Control-Allow-Origin', '*')
+            ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
+            ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+});
+//para ingresar una foto por composer se hace de la siguiente manera $files = $request->getUploadedFiles();
+$app->post('/file/archivos',function (Request $request,Response $response ){
+    $files = $request->getUploadedFiles();
+    
+});
+
 $app->get('/hello/{name}', function (Request $request, Response $response) {
     $name = $request->getAttribute('name');
     $response->getBody()->write("Hello, $name");
-
+    
     return $response;
 });
 $app->get('/cd', function (Request $request, Response $response) {
